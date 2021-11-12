@@ -1,3 +1,4 @@
+{% load static%}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng nhập</title>
+    <link rel="stylesheet" href="{%static 'login.css' %}">
     <link rel="shortcut icon"
         href="https://cdn-icons.flaticon.com/png/512/2050/premium/2050106.png?token=exp=1636611665~hmac=e417e8e5523f82b0d0d056eca71dfd4c" />
     <style>
@@ -18,20 +20,22 @@
 </head>
 
 <body>
-    <h3>Đăng nhập người dùng</h3>
+    <h2>Đăng nhập người dùng</h2>
     <hr />
     {% if messages %}
     {% for message in messages %}
     <p>{{message}}</p>
     {% endfor %}
     {% endif %}
-    <form method="post" action="">
-        {% csrf_token %}
-        {{form.as_p}}
-        <input type="submit" />
-        <input type="reset" />
-        <button><a href="{% url 'home' %}" style="text-decoration: none">Home</a></button>
-    </form>
+    <div class="wrapper">
+        <form class="login" method="post" action="">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" />
+            <input type="reset" />
+            <button><a href="{% url 'home' %}" style="text-decoration: none">Home</a></button>
+        </form>
+    </div>
 </body>
 
 </html>
