@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from django.db import models
 from django.utils import timezone
 # Create your models here.
@@ -10,3 +11,5 @@ class Post(models.Model):
         return self.title
     def str(self):
         return self.content
+=======
+>>>>>>> a01386fb3daae376bc29308e2e113b1514907a73
