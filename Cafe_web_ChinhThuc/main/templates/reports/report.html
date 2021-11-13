@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'report.css' %}">
+    <title>Đánh giá</title>
+</head>
+
+<body class='container' >
+    <form action="{%url 'save' %}" method="post" class="form-login">
+        {% csrf_token %}
+        <p class='ten'> Họ và tên:{{post.title}}</p>
+        <p class='KH'> Ý kiến khách hàng:</p>
+        <p class='content'>{{post.content}}</p>
+        <p class='time'>{{post.time_create}}</p>
+        <input class='Gui' type="submit" value="Gửi">
+    </form>
+</body>
+
+</html>

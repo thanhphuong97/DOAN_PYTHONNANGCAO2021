@@ -1,0 +1,9 @@
+<link rel="stylesheet" href="{%static 'tooplate-antique-cafe.css' %}">
+    <link rel="stylesheet" href="{%static 'tailwind.css' %}">
+    <link rel="stylesheet" href="{%static 'aa.min.css' %}">
+
+<style>
+        body {
+            background-image: url('{% static "img/antique-cafe-bg-01.jpg"%}')
+        }
+    </style>

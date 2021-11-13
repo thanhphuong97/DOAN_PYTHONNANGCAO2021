@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{%static 'comment.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Những ý kiến đóng góp của bạn giúp phần nâng cao chất lượng dịch vụ của chúng tôi</h2>
+    <ol>
+        {%if list%}
+        {%for item in list%}
+        <p>Bình luận mới:</p>
+        <p>{{item.title}}</p>
+        <p>{{item.content}}</p>
+
+        {%endfor%}
+        {%else%}
+        <h3 style="color: red;">Không có bình luận mới nào</h3>
+        {%endif%}
+
+    </ol>
+</body>
+
+</html>
